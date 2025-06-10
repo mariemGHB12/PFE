@@ -1,0 +1,388 @@
+[
+    [
+        {
+            "title": "MASTERS",
+            "description": "Des Programmes de Masters de deux ans, à temps plein, avec un portefeuille de nouvelles compétences techniques et managériales axé sur la pratique du monde réel.",
+            "link": "https://www.pristiniaiuniversity.tn/fr/diploma/1/masters"
+        },
+        {
+            "title": "BACHELOR",
+            "description": "Des programmes spécialement conçus pour les besoins de l'ère numérique. Nos programmes enseignent les fondamentaux, les idées, la vision et les compétences nécessaires pour conduire la prochaine grande révolution technologique.",
+            "link": "https://www.pristiniaiuniversity.tn/fr/diploma/2/bachelor"
+        },
+        {
+            "title": "FORMATIONS CERTIFIANTES",
+            "description": "Vous voulez renforcer votre expertise dans les domaines de l’Intelligence Artificielle et de la Data Science ! PRISTINI School of AI met à votre disposition des formations sur mesure et certifiantes.",
+            "link": "https://www.pristiniaiuniversity.tn/fr/diploma/3/formations-certifiantes"
+        },
+        {
+            "title": "INNOVATIONS",
+            "description": "Inscrits à PRISTINI School of AI, vous pouvez décupler votre potentiel créatif et INNOVANT grâce aux plusieurs Startups situées au cœur de l’Université et opérants dans l’Intelligence Artificielle. Votre interaction avec ces Startups, que ce soit à travers la formation, ou bien à travers les projets d’études, génère un savoir-faire consistant, augmente vos compétences et vous ouvre un nouveau champ d’expérimentation pour vos idées innovantes.",
+            "link": "https://www.pristiniaiuniversity.tn/fr/diploma/4/innovation"
+        },
+        {
+            "title": "Liens utiles",
+            "description": "admission@pristini-international.tn",
+            "link": "https://www.pristiniaiuniversity.tn/fr/about-us"
+        }
+    ],
+    {
+        "url": "https://www.pristiniaiuniversity.tn/fr/program/1/machine-learning-for-business",
+        "title": "Machine Learning For Business",
+        "duration": "2 ans",
+        "delivered_by": " Pristini school of AI",
+        "description_blocks": [
+            "Bac+3 ou plus.",
+            "Le Master Machine Learning for Business s'adresse aux titulaires d'une Licence en GLSI, Data Science, Sciences et Technologies, Informatique de Gestion, Science Économique et Gestion.",
+            "Data Scientist, Développeur/Concepteur IA, Consultant BI/Consultant Décisionnel/Chef de Projet BI, Business Data Analyst, Gestionnaire de compte Client.",
+            "Pour résumer, le Développeur/Concepteur IA conçoit et développe des programmes d’IA en s’appuyant sur des données, le Chef de Projet BI/ Consultant BI/Consultant Décisionnel apporte des solutions via un outil d’aide à la décision et veille sur le bon déroulement du projet depuis la phase de développement de l’outil au déploiement en passant par les tests techniques, le Data Scientist valorise les données brutes et le Business data analyst est le traducteur des données internes et externes d’une entreprise.",
+            "Ce master vise à fournir les compétences nécessaires (modélisation probabiliste, apprentissage profond, traitement des données non structurées, visualisation des données, réseaux de neurones...) pour l’implémentation de solutions machine learning, la prise de décision stratégique dans les organisations et l’amélioration des processus métiers.",
+            "Le programme permet d’acquérir des fondements:",
+            "A travers ce parcous, vous garantissez l'acquisition d'un haut niveau scientifique en Data Science et Intelligence Artificielle, avec une très bonne culture de l’apprentissage machine. Ce master est enseigné par des experts du numérique et des universitaires de premier plan qui sont activement engagés dans des carrières réussies dans leurs domaines respectifs."
+        ],
+        "modules": {
+            "MATHÉMATIQUES ET SCIENCES DE DONNÉE": [
+                "Fondements mathématiques des données scientifiques",
+                "Data Mining",
+                "Statistiques Avancées",
+                "Bases de données NoSQL",
+                "Systèmes répartis pour le Big Data",
+                "Conception des systèmes d'information",
+                "Modélisation et processus stochastiques",
+                "Data management & Data visualization",
+                "Data analytics and decision making",
+                "Sécurité des données"
+            ],
+            "PROGRAMMATION": [
+                "Machine Learning",
+                "Deep Learning",
+                "Traitement automatique du langage naturel",
+                "Blockchain",
+                "Frameworks Big Data",
+                "Cognitive computing",
+                "Cloud Computing",
+                "Pervasive Computing"
+            ],
+            "MANAGEMENT": [
+                "Innovation & technology management",
+                "Entrepreneuriat (Product & BigCo Immersive Studio)",
+                "Processus agile unifié de développement",
+                "Techniques de communication",
+                "Anglais des affaires",
+                "Gestion de projet IA",
+                "Droit et éthique informatique",
+                "Risk Management"
+            ],
+            "ACCULTURATION": [
+                "Data base Management System",
+                "Conduite du changement",
+                "Stratégie digitale des organisations",
+                "Système d'information décisionnel",
+                "Projet IA for Business",
+                "Clinique de l'IA"
+            ]
+        }
+    },
+    {
+        "url": "https://www.pristiniaiuniversity.tn/fr/program/3/data-science-ai-industry-4-0",
+        "title": "Data Science, AI & Industry 4.0",
+        "duration": "2ans",
+        "delivered_by": "pristiniaiuniversity",
+        "description_blocks": [
+            "Bac+3 ou plus.",
+            "Le master Data Science, AI & Industry 4.0 s'adresse aux titulaires d'une Licence en GLSI, Data Science, Sciences excates et Technologies, Informatique, Sciences Économiques et Gestion, Science Appliquées et Technologie.",
+            "Data engineer. Data analyst. Administrateur de bases de données. Gestionnaire de données massives. Gestionnaire d’applications. Intégrateur d’applications. Data architect. Data Engineer /Concepteur et développeur d’applications Big Data. Ingénieur R&D IA.",
+            "Pour résumer, le Data Architect organise le projet, le Data Engineer gère les données brutes, le Data Scientist les valorise, le Data Analyst les interprète, l'Ingénieur R&D IA examine la technologie IA par le prisme d’un projet.",
+            "La mise en œuvre de l'intelligence artificielle au sein de l'industrie 4.0 influence toutes les industries, y compris la fabrication, le transport, l'éducation et bien d'autres, d'autant plus que l'industrie 4.0 repose fortement sur l'interconnectivité, l'automatisation, les données en temps réel et l'apprentissage automatique . Ce parcours répond à un fort besoin de l'industrie 4.0 pour la gestion des projets Big Data tout en mettant l'accent sur les connaissances clés nécessaires pour résoudre les défis commerciaux et obtenir un avantage concurrentiel grâce à l'application des technologies d'intelligence artificielle. Il fournit les connaissances théoriques et pratiques pour travailler dans tous les secteurs et mettre en œuvre l'IA si nécessaire. Ce Master est enseigné par des experts de l'industrie et des universitaires de premier plan qui sont activement engagés dans des carrières réussies dans leurs domaines respectifs."
+        ],
+        "modules": {
+            "MATHÉMATIQUES ET SCIENCES DE DONNÉE": [
+                "Complexité algorithmique",
+                "Fondements mathématiques des données scientifiques",
+                "Introduction au Big Data",
+                "Calcul parallèle et distribué",
+                "Bases de données NoSQL",
+                "Fouille de données",
+                "Traitement du Big Data avancé",
+                "Modélisation des systèmes pour le Big Data",
+                "Visualisation des données massives",
+                "Systèmes répartis pour le Big Data"
+            ],
+            "PROGRAMMATION": [
+                "Machine learning",
+                "Programmation Java",
+                "Programmation Python",
+                "Traitement automatique du langage naturel",
+                "Frameworks Big Data",
+                "Programmation R",
+                "Internet of Things",
+                "Robotique industrielle",
+                "Cloud computing"
+            ],
+            "MANAGEMENT": [
+                "Innovation & technology management",
+                "Techniques de communication",
+                "Entrepreneuriat",
+                "Processus agile unifié de développement",
+                "Anglais des affaires",
+                "Droit et éthique informatique",
+                "Gestion de projet I4.0"
+            ],
+            "ACCULTURATION": [
+                "Data base Management System",
+                "Projet IA",
+                "Clinique de l'IA",
+                "Conduite du changement",
+                "Système d'information décisionnel"
+            ]
+        }
+    },
+    {
+        "url": "https://www.pristiniaiuniversity.tn/fr/program/16/master-co-construit-datascience-ai-i4-0-x-novation-city",
+        "title": "Master Co-Construit DataScience , AI & I4.0 X Novation City Industry 4.0 Center",
+        "duration": "2ans",
+        "delivered_by": "pristiniaiuniversity",
+        "description_blocks": [
+            "Bac+3 ou plus.",
+            "Le programme de Master en Data Science, IA et Industrie 4.0 s'adresse aux titulaires d'un diplôme de licence en Sciences et Technologies : Informatique, Informatique de Gestion, Sciences Appliquées et Technologie.",
+            "Le programme est conçu pour doter les futurs professionnels de connaissances avancées en data sciences , intelligence artificielle et de leurs applications dans les environnements de l'Industrie 4.0. Le programme prépare les diplômés à occuper des métier clés tels que: Industrial Data Scientist, Process Digitalization Manager, Robotization Manager, Supply Chain Manager, I4.0 Consultant, Digital Solution Integrator, IoT Developer, and Big Data Architect."
+        ],
+        "modules": {
+            "HUB DE PRISTINI SCHOOL OF AI HUB": [
+                "Fondement mathematiques de l’IA",
+                "Analyse et programmation avec Python",
+                "Programmation en R",
+                "Bases de données (SQL & NoSQL)",
+                "Exploration de données",
+                "Visualisation de données",
+                "Big Data (Traitement, Frameworks, Modélisation)",
+                "Intelligence Artificielle",
+                "Apprentissage automatique - Apprentissage profond",
+                "Cloud Computing",
+                "Systèmes d'information decisionnel",
+                "Processus de développement agile unifié",
+                "Anglais des affaires et techniques en communication",
+                "Droit et éthique"
+            ],
+            "HUB DE NOVATION CITY INDUSTRY 4.0 CENTER": [
+                "Fondements de l’industrie 4.0",
+                "Internet des objets (IoT)",
+                "Robotique industriel",
+                "Gestion des projets I4.0 et calcul des performances",
+                "Séminaires métiers",
+                "Certification dirigée par un instructeur Nvidia \n1-Applications of AI for Anomaly Detection\n2-Applications of AI for Predictive Maintenance\n3-Computer Vision for Industrial Inspection"
+            ]
+        }
+    },
+    {
+        "url": "https://www.pristiniaiuniversity.tn/fr/diploma/4/innovation",
+        "title": "Innovations",
+        "subTitle": "Innovations",
+        "description": [
+            "Le nouveau concept de la Clinique de l’IA repose sur une activité ayant une double vocation pédagogique et professionnelle. Cette structure se consacre à la formation des étudiants par la pratique de la programmation et la manipulation de vraies données. Les projets déposés dans le cadre de la CIA sont proposés par nos partenaires et répondent à des besoins réels.",
+            "Pristiní offre aux étudiants des programmes d’échanges avec plus de 15 universités dans 9 pays à travers le monde. Pristini offre la possibilité aux étudiants de découvrir les styles de management d'autres pays et d'explorer les facteurs contextuels. Chaque destination a ses spécificités et vous n'aurez jamais la même approche ou le même agenda, selon le pays visité.",
+            "Immersive Studio est une partie obligatoire - et l'une des parties les plus excitantes - de chaque programme menant à un diplôme de l'Université Pristini AI. Grâce à cette série de cours intensément immersifs, vous développerez des solutions technologiques pour les startups, entreprises et organisations de premier plan à Sousse.",
+            "Pristini incite ses apprenants à créer de la valeur, entreprendre, impacter positivement la communauté et la société. Dans ce contexte, nous avons mis en place un programme de valorisation des activités associatives, culturelles, de bénévolat ou sportives."
+        ],
+        "programs_links": [
+            "https://www.pristiniaiuniversity.tn/fr/program/6/ai-clinic",
+            "https://www.pristiniaiuniversity.tn/fr/program/6/ai-clinic",
+            "https://www.pristiniaiuniversity.tn/fr/program/6/ai-clinic",
+            "https://www.pristiniaiuniversity.tn/fr/program/7/abroad-track",
+            "https://www.pristiniaiuniversity.tn/fr/program/7/abroad-track",
+            "https://www.pristiniaiuniversity.tn/fr/program/7/abroad-track",
+            "https://www.pristiniaiuniversity.tn/fr/program/8/immersive-experience",
+            "https://www.pristiniaiuniversity.tn/fr/program/8/immersive-experience",
+            "https://www.pristiniaiuniversity.tn/fr/program/8/immersive-experience",
+            "https://www.pristiniaiuniversity.tn/fr/program/6/ai-clinic"
+        ]
+    },
+    {
+        "url": "https://www.pristiniaiuniversity.tn/fr/program/6/ai-clinic",
+        "title": "AI Clinic",
+        "duration": "",
+        "delivered_by": "",
+        "description_blocks": [
+            "La démarche d’accompagnement consiste à mettre en place les outils nécessaires et les incitations judicieuses pour orienter et coacher les apprentissages de ceux d’entre vous qui portent le projet d’innovation. Les Coachs jouent le rôle de facilitateurs qui aident à lever les obstacles, proposent des règles d’orientation communes afin d’encourager le travail en commun et contribuer à renforcer la capacité à l’innovation.",
+            "Il s’agit dans cette phase de vous accompagner sur l’ensemble du process « Sprint Design », de l’analyse des besoins jusqu’aux tests et validation des utilisateurs en passant par la conception d’un prototype. L’étape de conception pour explorer des choix et proposer diverses versions d’interfaces alors que le prototype démontre le concept, aide à l’élicitation des exigences et leur validation."
+        ],
+        "modules": {}
+    },
+    {
+        "url": "https://www.pristiniaiuniversity.tn/fr/program/8/immersive-experience",
+        "title": "Immersive Experience",
+        "duration": "",
+        "delivered_by": "",
+        "description_blocks": [
+            "C'est une partie obligatoire - et l'une des parties les plus excitantes - de chaque programme menant à un diplôme de l'Université Pristini AI. Grâce à cette série de cours intensément immersifs, vous développerez des solutions technologiques pour les startups, entreprises et organisations de premier plan à Sousse.",
+            "Immersive Studio vous transformera! Vous serez mis au défi comme jamais auparavant. Vous apprendrez que vous n'avez peut-être pas tout ce qu'il faut. Mais vous apprendrez à diriger une équipe qui le fait. Vous ferez des erreurs. Et vous serez si heureux de les avoir faits ici. Pour vraiment savoir comment fonctionnent l'innovation et l'entrepreneuriat, vous devez faire des choses : de nouveaux produits, de nouvelles entreprises, de nouveaux contacts de réseau et probablement quelques erreurs. Le programme Studio de Cornell Tech, une exigence du programme pour tous les diplômes de maîtrise, maximise vos opportunités de développer et de mettre en œuvre de nouveaux produits et idées commerciales, de collaborer avec des camarades de classe de tout le campus de Cornell Tech et d'interagir avec des innovateurs et des leaders d'opinion grâce à la technologie florissante de New York et à communautés de startups.",
+            "C'est un cours obligatoire pour tous les nouveaux étudiants L1/M1 et enseigné au cours d’un semestre d'automne/printemps. Au cours du semestre, vous travaillerez en équipe pour développer un nouveau produit ou service technologique en réponse à un défi posé par une vraie entreprise. Vous ferez l'expérience directe du fonctionnement du processus de développement de produits dans le monde réel et commencerez à créer un réseau au sein de la technopole Novation City.",
+            "",
+            "Dans ce cours dispensé en L2, vous et une équipe de vos camarades de classe développerez votre propre nouveau produit ou idée de démarrage. Vous ferez l'expérience de l'ensemble du processus, du développement de votre idée au prototypage et aux tests, en passant par la présentation aux investisseurs. Vous pouvez même postuler pour un Startup Award qui fournira un financement et d'autres soutiens pour vous aider à transformer votre projet Startup Studio en une véritable entreprise.",
+            "",
+            "Dans ce cours dispensé en L3, vous et une équipe de vos camarades de classe aurez l'opportunité de vous concentrer spécifiquement sur le développement de produits et les modèles commerciaux qui accélèrent les changements positifs dans les secteurs public, à but non lucratif, à but lucratif et hybride. Vous développerez votre propre nouveau produit ou idée de démarrage dans une optique sociétale, en mettant l'accent sur les communautés démunies et les besoins dans des domaines tels que l'éducation, la santé, le transport intelligent, la réduction de la pauvreté, le changement climatique et le tourisme.",
+            "",
+            "Conçu pour les classes terminales, Innover au sein d'une grande entreprise (BigCo), c'est construire pour des milliers voire des millions de personnes. Et cela nécessite de naviguer dans des cultures complexes, de présenter aux personnes qui contrôlent les budgets et de construire des projets à grande échelle. Vous apprendrez ces compétences et plus encore dans ce cours révolutionnaire, enseigné par des cadres de grandes companies (Talan, Instadeep, Google, Nvidia, …), à mesure que vous construisez, présentez et pitchez un produit fonctionnel à un vrai BigCo."
+        ],
+        "modules": {}
+    },
+    {
+        "url": "https://www.pristiniaiuniversity.tn/fr/page/11/admission",
+        "title": "Admission",
+        "paragraphs": [
+            "Admission en ligne",
+            "Découvrez comment postuler au Bachelors Applied Artificial Intelligence et Business Intelligence.",
+            "Découvrez comment postuler aux Masters Machine Learning for Business, Data Science IA & HealthTech et Data Science, IA & Industry 4.0.",
+            "Découvrez comment postuler pour nos programmes de formations certifiantes.",
+            "Vous trouverez ici les activités, événements et visites qui vous permettront de rencontrer des représentants de Pristini School of AI en ligne et en présentiel et d'apprendre à nous connaître davantage.",
+            "Des programmes de Masters de deux ans, à temps plein, avec un portefeuille de nouvelles compétences techniques et managériales axées sur la pratique du monde réel.",
+            "Des programmes spécialement conçus pour les besoins de l'ère numérique. Nos programmes enseignent les fondamentaux, les idées, la vision et les compétences nécessaires pour conduire la prochaine grande révolution technologique.",
+            "Vous voulez renforcer votre expertise dans les domaines de l'Intelligence Artificielle et de la Data Science ! Pristini School of AI met à votre disposition des formations sur mesure et certifiantes.",
+            "admission@pristini-international.tn",
+            "+216 96 777 555",
+            "Novation city - Pôle technologique - Sousse"
+        ],
+        "email": "admission@pristini-international.tn",
+        "phone": "+216 96 777 555",
+        "address": "Novation city - Pôle technologique - Sousse",
+        "social_links": [
+            "https://www.facebook.com/PristiniSchoolofAI/",
+            "https://www.linkedin.com/company/pristini-ai-university/",
+            "https://www.instagram.com/pristini_school_of_ai/"
+        ],
+        "footer_links": [
+            "https://www.pristiniaiuniversity.tn/fr/page/9/candidature-aux-programmes-de-bachelors",
+            "https://www.pristiniaiuniversity.tn/fr/page/9/candidature-aux-programmes-de-bachelors",
+            "https://www.pristiniaiuniversity.tn/fr/page/9/candidature-aux-programmes-de-bachelors",
+            "https://www.pristiniaiuniversity.tn/fr/page/8/candidature-aux-programmes-de-masters",
+            "https://www.pristiniaiuniversity.tn/fr/page/8/candidature-aux-programmes-de-masters",
+            "https://www.pristiniaiuniversity.tn/fr/page/8/candidature-aux-programmes-de-masters",
+            "https://www.pristiniaiuniversity.tn/fr/page/10/candidature-aux-programmes-de-certifications",
+            "https://www.pristiniaiuniversity.tn/fr/page/10/candidature-aux-programmes-de-certifications",
+            "https://www.pristiniaiuniversity.tn/fr/page/10/candidature-aux-programmes-de-certifications",
+            "https://www.pristiniaiuniversity.tn/fr/page/9/candidature-aux-programmes-de-bachelors",
+            "https://www.pristiniaiuniversity.tn/fr/page/8/candidature-aux-programmes-de-masters",
+            "https://www.pristiniaiuniversity.tn/fr/page/10/candidature-aux-programmes-de-certifications",
+            "https://www.pristiniaiuniversity.tn/fr/page/12/evenements-d-admission",
+            "https://www.pristiniaiuniversity.tn/fr/page/12/evenements-d-admission",
+            "https://www.pristiniaiuniversity.tn/fr/page/22/impact"
+        ]
+    },
+    {
+        "url": "https://www.pristiniaiuniversity.tn/fr/program/4/applied-artificial-intelligence",
+        "title": "Génie Logiciel Et Systèmes D'Informations",
+        "duration": "3ans",
+        "delivered_by": "pristiniaiuniversity",
+        "description_blocks": [
+            "Le bachelor en Génie Logiciel et Systèmes d'Informations (GLSI) s'adresse principalement aux bacheliers scientifiques en mathématiques, sciences expérimentales, sciences techniques et sciences de l'informatique. L'admission des bacheliers en économie et gestion est conditionnée par un test d'admission.",
+            "Développeur machine learning, Gestionnaire Big Data (Data Architect), Testeur IA, Intégrateur / Programmeur IA, Data Analyst.",
+            "Pour résumer, le Data Architect organise le projet, le Data Engineer gère les données brutes, le Data Scientist les valorise, le Data Analyst les interprète, l'Ingénieur R&D IA examine la technologie IA par le prisme d'un projet.",
+            "Les métiers de l'IA nécessitent une compétence à la croisée des chemins entre les compétences Techniques, les compétences métiers et les compétences éthiques. C'est dans ce cadre que l'objectif général de cette formation est de donner toutes les connaissances pour devenir un spécialiste du développement d'applications informatiques autour de l'IA et de la Data Science, mais d'acquérir également des compétences autour de la manipulation et l'évaluation des données. A travers ce bachelor, l'étudiant pourra développer ses aptitudes techniques pour l'exploitation des bases de données, acquérir un savoir en matière d'analyse et de traitement des données, apprendre la démarche algorithmique pour programmer et bâtir une structuration fiable et rigoureuse et développer les prises d'initiative et le sens de l'entrepreneuriat. Ce bachelor est enseigné par des experts du numérique et des universitaires de premier plan qui sont activement engagés dans des carrières réussies dans leurs domaines respectifs."
+        ],
+        "modules": {
+            "MATHEMATICS AND DATA SCIENCE": [
+                "Algèbre & Analyse",
+                "Probabilités & Statistiques",
+                "Algorithmique & structure de données",
+                "Logique and multimédia",
+                "Bases de données",
+                "Data Mining",
+                "Cloud & Big Data",
+                "Data Visualisation"
+            ],
+            "PROGRAMMATION": [
+                "Systèmes d’exploitation",
+                "Python Niveau 1 & 2",
+                "Réseaux : fondements & services",
+                "Automate & optimisation",
+                "Programmation Java",
+                "Machine Learning",
+                "Indexation & Web",
+                "Compilation & Tests",
+                "Deep Learning",
+                "Sécurité informatique",
+                "Architecture SOA et services web",
+                "Développement d'applications"
+            ],
+            "MANAGEMENT": [
+                "Gestion d'entreprise",
+                "Droit informatique, protection des données et éthique Anglais",
+                "Techniques de communication",
+                "Entrepreneuriat (Immersive Studio)"
+            ],
+            "ACCULTURATION": [
+                "Histoire de l’IA",
+                "Culture et compétences numériques",
+                "Systèmes d'informations",
+                "Clinique de l'IA",
+                "Data base Management System",
+                "Préparation à l'environnement professionnel",
+                "Projet IA"
+            ]
+        }
+    },
+    {
+        "url": "https://www.pristiniaiuniversity.tn/fr/program/5/business-intelligence",
+        "title": "Business Intelligence",
+        "duration": "3ans",
+        "delivered_by": "pristiniaiuniversity",
+        "description_blocks": [
+            "Le bachelor en Business Intelligence s'adresse aux bacheliers scientifiques en mathématiques, sciences expérimentales, sciences techniques et sciences de l'informatique ainsi qu'aux bacheliers en économie et gestion.",
+            "Data Analyst, Data Scientist, Analyste programmeur, Responsable projet développement, Concepteur IA, Développeur IA, Testeur IA, Administrateur de Bases de Données, Consultant en Business IA.",
+            "Pour résumer, le responsable projet développement organise le projet, le concepteur IA conçoit des solutions innovantes en IA pour faire évoluer l'architecture d'une entreprise selon ses besoins et le développeur IA les développe, le testeur IA exécute les plans de tests afin de garantir la qualité d’un programme informatique basé sur l'IA et de ses fonctionnalités, le data analyst interprète les donnée et le data scientist les valorise.",
+            "Ce bachelor permet à l'apprenant de se doter d'un ensemble de fondamentaux de la gestion digitale couplés à de fortes connaissances en informatique, tout en acquérant des compétences d'analyse guidées par un sens stratégique. Ainsi, il sera en mesure de développer des briques d'intelligence artificielle, tout en concevant, testant et adaptant des applicatifs intégrant les technologies du métier. Ce parcours permet également de prendre en main les outils nécessaires d’aide à la décision et le système d’information de l’entreprise à travers une forte formation dans la conception, le développement, l’intégration des solutions et l’analyse des données où l'étudiant s'approprie les techniques et méthodes d'analyse des données de l'entreprise pour our améliorer la stratégie globale de l’entreprise, les processus opérationnels, la relation client, le marketing, etc. L'étudiant sera en mesure de réaliser le projet de business intelligence dans sa totalité, de la conception à la mise en action, de comprendre et exploiter les \"Big Data\" dans l’entreprise afin de proposer une stratégie décisionnelle, de composer les tableaux de bord pour assister la prise de décision et choisir les indicateurs de performance les mieux adaptés à chaque situation. Ce bachelor est enseignée par des experts du numérique et des universitaires de premier plan qui sont activement engagés dans des carrières réussies dans leurs domaines respectifs."
+        ],
+        "modules": {
+            "MATHÉMATIQUES ET SCIENCES DE DONNÉE": [
+                "Algèbre & Analyse",
+                "Probabilités & Statistiques",
+                "Algorithmique & structure de données",
+                "Logique mathématique",
+                "Systèmes logiques",
+                "Théorie de décision et techniques de prévision",
+                "Analyse et fouille de données",
+                "Analyse des données",
+                "Bases de données",
+                "Graphes et recherche opérationnelle"
+            ],
+            "PROGRAMMATION": [
+                "Systèmes d’exploitation",
+                "Python Niveau 1 & 2",
+                "Machine Learning for business",
+                "Réseaux",
+                "Programmation Java",
+                "Data Mining",
+                "Ingénierie des logiciels",
+                "Cloud & Big Data",
+                "Sécurité IT",
+                "Blockchain"
+            ],
+            "MANAGEMENT": [
+                "Principes de Gestion",
+                "Comptabilité",
+                "Business communication",
+                "Digital Innovation Management",
+                "Gestion Financière",
+                "Economie",
+                "Problem solving & mediation",
+                "Marketing Digital",
+                "Ethique et droit des IT",
+                "Gestion de projet",
+                "Entrepreneuriat Digital",
+                "Leadership",
+                "Gestion de la technologie de l'information"
+            ],
+            "ACCULTURATION": [
+                "Compétences numériques",
+                "Histoire de l’IA",
+                "Introduction aux systèmes d'information",
+                "Clinique de l'IA",
+                "Data base Management System",
+                "Dynamique des connaissances",
+                "Réseaux sociaux : analyse du comportement de l'internaute",
+                "Psycology & sociology for online media applications",
+                "Le système d'information comptable"
+            ]
+        }
+    }
+]

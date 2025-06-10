@@ -1,0 +1,59 @@
+<!-- Chatbot flottant Pristini -->
+
+<style>
+  #chatbot-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+  }
+  #chatbot-btn:hover {
+    background: #0056b3;
+  }
+  #chatbot-iframe {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 100vw;        /* pleine largeur écran */
+    max-width: 400px;    /* max largeur fixe */
+    height: 80vh;        /* hauteur 80% de la fenêtre */
+    max-height: 600px;   /* hauteur max */
+    border: none;
+    display: none;
+    z-index: 9999;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    border-radius: 10px;
+    background: white;
+    overflow: auto;      /* scroll si contenu dépasse */
+  }
+</style>
+
+<button id="chatbot-btn" aria-label="Toggle chatbot">💬</button>
+
+<iframe
+  id="chatbot-iframe"
+  src="https://c29d-165-51-42-137.ngrok-free.app"
+  title="Chatbot Pristini"
+  loading="lazy"
+></iframe>
+
+<script>
+  const btn = document.getElementById('chatbot-btn');
+  const iframe = document.getElementById('chatbot-iframe');
+
+  btn.addEventListener('click', () => {
+    const isVisible = iframe.style.display === 'block';
+    iframe.style.display = isVisible ? 'none' : 'block';
+    btn.textContent = isVisible ? '💬' : '❌';
+  });
+</script>
