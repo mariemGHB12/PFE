@@ -1,4 +1,18 @@
 🔹 Chunk 1:
+🌟 Programme : AI Clinic
+🏫 Établissement : 
+⏱ Durée : 
+
+📝 Description :
+La démarche d’accompagnement consiste à mettre en place les outils nécessaires et les incitations judicieuses pour orienter et coacher les apprentissages de ceux d’entre vous qui portent le projet d’innovation. Les Coachs jouent le rôle de facilitateurs qui aident à lever les obstacles, proposent des règles d’orientation communes afin d’encourager le travail en commun et contribuer à renforcer la capacité à l’innovation. Il s’agit dans cette phase de vous accompagner sur l’ensemble du process « Sprint Design », de l’analyse des besoins jusqu’aux tests et validation des utilisateurs en passant par la conception d’un prototype. L’étape de conception pour explorer des choix et proposer diverses versions d’interfaces alors que le prototype démontre le concept, aide à l’élicitation des exigences et leur validation.
+
+📚 Modules clés :
+Modules non disponibles
+
+🔗 Lien vers le programme : https://www.pristiniaiuniversity.tn/fr/program/6/ai-clinic
+📅 Prochaine session : À définir
+--------------------------------------------------------------------------------
+🔹 Chunk 2:
 🌟 Programme : Immersive Experience
 🏫 Établissement : 
 ⏱ Durée : 
@@ -12,7 +26,21 @@ Modules non disponibles
 🔗 Lien vers le programme : https://www.pristiniaiuniversity.tn/fr/program/8/immersive-experience
 📅 Prochaine session : À définir
 --------------------------------------------------------------------------------
-🔹 Chunk 2:
+🔹 Chunk 3:
+🌟 Programme : Machine Learning For Business
+🏫 Établissement :  Pristini school of AI
+⏱ Durée : 2 ans
+
+📝 Description :
+Bac+3 ou plus. Le Master Machine Learning for Business s'adresse aux titulaires d'une Licence en GLSI, Data Science, Sciences et Technologies, Informatique de Gestion, Science Économique et Gestion. Data Scientist, Développeur/Concepteur IA, Consultant BI/Consultant Décisionnel/Chef de Projet BI, Business Data Analyst, Gestionnaire de compte Client. Pour résumer, le Développeur/Concepteur IA conçoit et développe des programmes d’IA en s’appuyant sur des données, le Chef de Projet BI/ Consultant BI/Consultant Décisionnel apporte des solutions via un outil d’aide à la décision et veille sur le bon déroulement du projet depuis la phase de développement de l’outil au déploiement en passant par les tests techniques, le Data Scientist valorise les données brutes et le Business data analyst est le traducteur des données internes et externes d’une entreprise. Ce master vise à fournir les compétences nécessaires (modélisation probabiliste, apprentissage profond, traitement des données non structurées, visualisation des données, réseaux de neurones...) pour l’implémentation de solutions machine learning, la prise de décision stratégique dans les organisations et l’amélioration des processus métiers. Le programme permet d’acquérir des fondements: A travers ce parcous, vous garantissez l'acquisition d'un haut niveau scientifique en Data Science et Intelligence Artificielle, avec une très bonne culture de l’apprentissage machine. Ce master est enseigné par des experts du numérique et des universitaires de premier plan qui sont activement engagés dans des carrières réussies dans leurs domaines respectifs.
+
+📚 Modules clés :
+MATHÉMATIQUES ET SCIENCES DE DONNÉE : Fondements mathématiques des données scientifiques, Data Mining, Statistiques Avancées, Bases de données NoSQL, Systèmes répartis pour le Big Data, Conception des systèmes d'information, Modélisation et processus stochastiques, Data management & Data visualization, Data analytics and decision making, Sécurité des données. PROGRAMMATION : Machine Learning, Deep Learning, Traitement automatique du langage naturel, Blockchain, Frameworks Big Data, Cognitive computing, Cloud Computing, Pervasive Computing. MANAGEMENT : Innovation & technology management, Entrepreneuriat (Product & BigCo Immersive Studio), Processus agile unifié de développement, Techniques de communication, Anglais des affaires, Gestion de projet IA, Droit et éthique informatique, Risk Management. ACCULTURATION : Data base Management System, Conduite du changement, Stratégie digitale des organisations, Système d'information décisionnel, Projet IA for Business, Clinique de l'IA.
+
+🔗 Lien vers le programme : https://www.pristiniaiuniversity.tn/fr/program/1/machine-learning-for-business
+📅 Prochaine session : À définir
+--------------------------------------------------------------------------------
+🔹 Chunk 4:
 🌟 Programme : Master Co-Construit DataScience , AI & I4.0 X Novation City Industry 4.0 Center
 🏫 Établissement : pristiniaiuniversity
 ⏱ Durée : 2ans
@@ -29,21 +57,7 @@ HUB DE PRISTINI SCHOOL OF AI HUB : Fondement mathematiques de l’IA, Analyse et
 🔗 Lien vers le programme : https://www.pristiniaiuniversity.tn/fr/program/16/master-co-construit-datascience-ai-i4-0-x-novation-city
 📅 Prochaine session : À définir
 --------------------------------------------------------------------------------
-🔹 Chunk 3:
-🌟 Programme : AI Clinic
-🏫 Établissement : 
-⏱ Durée : 
-
-📝 Description :
-La démarche d’accompagnement consiste à mettre en place les outils nécessaires et les incitations judicieuses pour orienter et coacher les apprentissages de ceux d’entre vous qui portent le projet d’innovation. Les Coachs jouent le rôle de facilitateurs qui aident à lever les obstacles, proposent des règles d’orientation communes afin d’encourager le travail en commun et contribuer à renforcer la capacité à l’innovation. Il s’agit dans cette phase de vous accompagner sur l’ensemble du process « Sprint Design », de l’analyse des besoins jusqu’aux tests et validation des utilisateurs en passant par la conception d’un prototype. L’étape de conception pour explorer des choix et proposer diverses versions d’interfaces alors que le prototype démontre le concept, aide à l’élicitation des exigences et leur validation.
-
-📚 Modules clés :
-Modules non disponibles
-
-🔗 Lien vers le programme : https://www.pristiniaiuniversity.tn/fr/program/6/ai-clinic
-📅 Prochaine session : À définir
---------------------------------------------------------------------------------
-🔹 Chunk 4:
+🔹 Chunk 5:
 🌟 Programme : Génie Logiciel Et Systèmes D'Informations
 🏫 Établissement : pristiniaiuniversity
 ⏱ Durée : 3ans
@@ -55,19 +69,5 @@ Le bachelor en Génie Logiciel et Systèmes d'Informations (GLSI) s'adresse prin
 MATHEMATICS AND DATA SCIENCE : Algèbre & Analyse, Probabilités & Statistiques, Algorithmique & structure de données, Logique and multimédia, Bases de données, Data Mining, Cloud & Big Data, Data Visualisation. PROGRAMMATION : Systèmes d’exploitation, Python Niveau 1 & 2, Réseaux : fondements & services, Automate & optimisation, Programmation Java, Machine Learning, Indexation & Web, Compilation & Tests, Deep Learning, Sécurité informatique, Architecture SOA et services web, Développement d'applications. MANAGEMENT : Gestion d'entreprise, Droit informatique, protection des données et éthique Anglais, Techniques de communication, Entrepreneuriat (Immersive Studio). ACCULTURATION : Histoire de l’IA, Culture et compétences numériques, Systèmes d'informations, Clinique de l'IA, Data base Management System, Préparation à l'environnement professionnel, Projet IA.
 
 🔗 Lien vers le programme : https://www.pristiniaiuniversity.tn/fr/program/4/applied-artificial-intelligence
-📅 Prochaine session : À définir
---------------------------------------------------------------------------------
-🔹 Chunk 5:
-🌟 Programme : Business Intelligence
-🏫 Établissement : pristiniaiuniversity
-⏱ Durée : 3ans
-
-📝 Description :
-Le bachelor en Business Intelligence s'adresse aux bacheliers scientifiques en mathématiques, sciences expérimentales, sciences techniques et sciences de l'informatique ainsi qu'aux bacheliers en économie et gestion. Data Analyst, Data Scientist, Analyste programmeur, Responsable projet développement, Concepteur IA, Développeur IA, Testeur IA, Administrateur de Bases de Données, Consultant en Business IA. Pour résumer, le responsable projet développement organise le projet, le concepteur IA conçoit des solutions innovantes en IA pour faire évoluer l'architecture d'une entreprise selon ses besoins et le développeur IA les développe, le testeur IA exécute les plans de tests afin de garantir la qualité d’un programme informatique basé sur l'IA et de ses fonctionnalités, le data analyst interprète les donnée et le data scientist les valorise. Ce bachelor permet à l'apprenant de se doter d'un ensemble de fondamentaux de la gestion digitale couplés à de fortes connaissances en informatique, tout en acquérant des compétences d'analyse guidées par un sens stratégique. Ainsi, il sera en mesure de développer des briques d'intelligence artificielle, tout en concevant, testant et adaptant des applicatifs intégrant les technologies du métier. Ce parcours permet également de prendre en main les outils nécessaires d’aide à la décision et le système d’information de l’entreprise à travers une forte formation dans la conception, le développement, l’intégration des solutions et l’analyse des données où l'étudiant s'approprie les techniques et méthodes d'analyse des données de l'entreprise pour our améliorer la stratégie globale de l’entreprise, les processus opérationnels, la relation client, le marketing, etc. L'étudiant sera en mesure de réaliser le projet de business intelligence dans sa totalité, de la conception à la mise en action, de comprendre et exploiter les "Big Data" dans l’entreprise afin de proposer une stratégie décisionnelle, de composer les tableaux de bord pour assister la prise de décision et choisir les indicateurs de performance les mieux adaptés à chaque situation. Ce bachelor est enseignée par des experts du numérique et des universitaires de premier plan qui sont activement engagés dans des carrières réussies dans leurs domaines respectifs.
-
-📚 Modules clés :
-MATHÉMATIQUES ET SCIENCES DE DONNÉE : Algèbre & Analyse, Probabilités & Statistiques, Algorithmique & structure de données, Logique mathématique, Systèmes logiques, Théorie de décision et techniques de prévision, Analyse et fouille de données, Analyse des données, Bases de données, Graphes et recherche opérationnelle. PROGRAMMATION : Systèmes d’exploitation, Python Niveau 1 & 2, Machine Learning for business, Réseaux, Programmation Java, Data Mining, Ingénierie des logiciels, Cloud & Big Data, Sécurité IT, Blockchain. MANAGEMENT : Principes de Gestion, Comptabilité, Business communication, Digital Innovation Management, Gestion Financière, Economie, Problem solving & mediation, Marketing Digital, Ethique et droit des IT, Gestion de projet, Entrepreneuriat Digital, Leadership, Gestion de la technologie de l'information. ACCULTURATION : Compétences numériques, Histoire de l’IA, Introduction aux systèmes d'information, Clinique de l'IA, Data base Management System, Dynamique des connaissances, Réseaux sociaux : analyse du comportement de l'internaute, Psycology & sociology for online media applications, Le système d'information comptable.
-
-🔗 Lien vers le programme : https://www.pristiniaiuniversity.tn/fr/program/5/business-intelligence
 📅 Prochaine session : À définir
 --------------------------------------------------------------------------------

@@ -1,142 +1,195 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Pristini AI Chatbot</title>
-  <!-- Google Fonts : Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: url("/static/background.jpg") no-repeat center center fixed;
-      background-size: cover;
-    }
-    .overlay {
-      background: rgba(255,255,255,0.9);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding-top: 30px;
-    }
-    .logo {
-      width: 180px;
-      margin-bottom: 20px;
-    }
-    .chat-container {
-      max-width: 720px;
-      width: 90%;
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 6px 30px rgba(0,0,0,0.2);
-    }
-    h1 {
-      text-align: center;
-      color: #003366;
-      margin-bottom: 25px;
-    }
-    textarea {
-      width: 100%;
-      padding: 15px;
-      border: 1px solid #d0d0d0;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      resize: vertical;
-      font-size: 15px;
-    }
-    button {
-      background: linear-gradient(45deg, #00AEEF, #00C19A);
-      color: white;
-      border: none;
-      padding: 14px 28px;
-      border-radius: 50px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      display: block;
-      margin: 0 auto;
-    }
-    button:hover {
-      opacity: 0.9;
-    }
-    .response {
-      margin-top: 30px;
-      background: #f0f4f8;
-      padding: 20px;
-      border-radius: 8px;
-      color: #333;
-      line-height: 1.6;
-      min-height: 80px;
-    }
-    .footer {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 13px;
-      color: #999;
-    }
-    /* Loader */
-    .loader {
-      border: 5px solid #f3f3f3;
-      border-top: 5px solid #00AEEF;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      animation: spin 0.9s linear infinite;
-      margin: 20px auto;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
-</head>
+import os
+import pickle
+import faiss
+import numpy as np
+from sentence_transformers import SentenceTransformer
+from typing import List
+from essai import build_index
+# Importer la lib Gemini
+import google.generativeai as genai
+from typing import List
+from langdetect import detect
+import requests
 
-<body>
 
-  <div class="overlay">
-    <img src="/static/logo.jpg" alt="Pristini Logo" class="logo">
-    <div class="chat-container">
-      <h1>🎓 Chatbot Pristini AI</h1>
-      <textarea id="prompt" rows="4" placeholder="Posez votre question ici..."></textarea>
-      <button onclick="sendPrompt()">Envoyer ma question</button>
+# Configurer l'API KEY
+genai.configure(api_key="AIzaSyC_x5AGH-cdrq1cgZGaPJ7yQFZYzo2UAYg")
 
-      <div class="response" id="result"></div>
-    </div>
+API_KEY = "AIzaSyC_x5AGH-cdrq1cgZGaPJ7yQFZYzo2UAYg"
+API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={API_KEY}"
 
-    <div class="footer">
-      © 2025 Pristini AI University 
-    </div>
-  </div>
+# === CONFIG ===
+TOP_K = 5
+EMBEDDING_MODEL = "all-MiniLM-L6-v2"
+INDEX_PATH = "C:\\Users\\marie\\OneDrive\\Desktop\\test\\rag_output\\faiss.index"
+SENTENCE_PATH = "C:\\Users\\marie\\OneDrive\\Desktop\\test\\rag_output\\sentences.pkl"
+METADATA_PATH = "C:\\Users\\marie\\OneDrive\\Desktop\\test\\rag_output\\metadata.pkl"
+JSON_PATH = "pristini_programs.json"
+OUTPUT_DIR = "rag_output"
+#build_index(JSON_PATH, OUTPUT_DIR)
+# === Load Pristini Data ===
+def load_data():
+    with open(SENTENCE_PATH, "rb") as f:
+        sentences = pickle.load(f)
+    with open(METADATA_PATH, "rb") as f:
+        metadata = pickle.load(f)
+    index = faiss.read_index(INDEX_PATH)
+    return sentences, metadata, index
 
-  <script>
-    async function sendPrompt() {
-      const prompt = document.getElementById("prompt").value;
-      const resultDiv = document.getElementById("result");
-      resultDiv.innerHTML = "⏳ Chargement...";
-      if (!prompt) {
-        resultDiv.innerHTML = "<em>Merci de saisir une question avant d'envoyer.</em>";
-        return;
-      }
+def detect_language(text):
+    try:
+        lang = detect(text)
+        return lang
+    except:
+        return 'unknown'
+    
+def get_response_from_gemini(prompt):
+    lang = detect_language(prompt)
 
-      // Loader animé
-      resultDiv.innerHTML = '<div class="loader"></div>';
+    if lang == 'en':
+        instruction = "Reply in English."
+    elif lang == 'fr':
+        instruction = "Réponds en français."
+    else:
+        instruction = "Réponds en français même si la langue du prompt n'est pas le français."
 
-      const response = await fetch("/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ prompt: prompt })
-      });
+    final_prompt = f"{instruction}\n\n{prompt}"
+    return ask_gemini(final_prompt)
 
-      const data = await response.json();
-
-      // Affiche la réponse
-      resultDiv.innerHTML = `<strong>Réponse :</strong><br>${data.response}`;
+def ask_gemini(prompt):
+    headers = {
+        "Content-Type": "application/json"
     }
-  </script>
 
-</body>
-</html>
+    payload = {
+        "contents": [
+            {
+                "parts": [
+                    {"text": prompt}
+                ]
+            }
+        ]
+    }
+
+    response = requests.post(API_URL, headers=headers, json=payload)
+
+    if response.status_code == 200:
+        result = response.json()
+        return result['candidates'][0]['content']['parts'][0]['text']
+    else:
+        return f"❌ Error: {response.status_code}, {response.text}"
+
+
+# === Retrieve Top-K Similar Transactions ===
+def get_top_k_chunks(sentences, index, query_vec, k=TOP_K):
+    D, I = index.search(np.array(query_vec), k)
+    return [sentences[i] for i in I[0]]
+
+def detect_needs(user_prompt):
+    needs = []
+    prompt_lower = user_prompt.lower()
+    
+    # Check for program types
+    if "master" in prompt_lower or "masters" in prompt_lower:
+        needs.append("MASTERS")
+    if "bachelor" in prompt_lower or "licence" in prompt_lower:
+        needs.append("BACHELOR")
+    if "formation certifiante" in prompt_lower or "certification" in prompt_lower:
+        needs.append("FORMATIONS CERTIFIANTES")
+    if "innovation" in prompt_lower or "startup" in prompt_lower:
+        needs.append("INNOVATIONS")
+    
+    # Check for technical domains
+    if ("data" in prompt_lower or "donnée" in prompt_lower or 
+        "big data" in prompt_lower or "data science" in prompt_lower):
+        needs.append("Data Science")
+    if ("ia" in prompt_lower or "intelligence artificielle" in prompt_lower or 
+        "machine learning" in prompt_lower or "deep learning" in prompt_lower):
+        needs.append("Intelligence Artificielle")
+    if ("management" in prompt_lower or "gestion" in prompt_lower or 
+        "business" in prompt_lower or "entreprise" in prompt_lower):
+        needs.append("Management")
+    if ("industrie 4.0" in prompt_lower or "i4.0" in prompt_lower or 
+        "robotique" in prompt_lower or "iot" in prompt_lower):
+        needs.append("Industry 4.0")
+    
+    # Check for specific programs
+    if "machine learning for business" in prompt_lower:
+        needs.append("Machine Learning For Business")
+    if "data science ai industry 4.0" in prompt_lower:
+        needs.append("Data Science, AI & Industry 4.0")
+    if "applied artificial intelligence" in prompt_lower:
+        needs.append("Applied Artificial Intelligence")
+    if "business intelligence" in prompt_lower:
+        needs.append("Business Intelligence")
+    
+    # If no specific needs detected, return general programs
+    if not needs:
+        needs = ["MASTERS", "BACHELOR", "FORMATIONS CERTIFIANTES", "INNOVATIONS"]
+    
+    return list(set(needs))  # Remove duplicatesje 
+def generate_answer(context_chunks: List[str], user_prompt: str):
+    # Joindre les contextes récupérés avec un séparateur
+    context = "\n---\n".join(context_chunks)
+
+    # Construire le prompt complet
+    full_prompt = f"""
+Tu es un assistant expert en orientation universitaire.
+Utilise uniquement les informations suivantes sur les programmes Pristini.
+
+Donne une réponse claire, concise et résumée, en mettant en avant les points clés et sans détails superflus.et si tu connais pas la reponse excuse toi et demande de reformuler la question ou de donner plus de context  
+tu dois te presenter et repondre au salutation de l'utilsateur 
+Context:
+{context}
+
+User question:
+{user_prompt}
+
+Answer:
+"""
+
+    # Initialiser le modèle Gemini (vérifie bien ta version lib >= 1.0.0)
+    model = genai.GenerativeModel(model_name="gemini-1.5-flash")
+
+    # Générer la réponse
+    response = model.generate_content(full_prompt)
+
+    # Retourner la réponse texte
+    return response.text
+
+
+
+# === Main Query Function ===
+def query_data(user_prompt):
+    print(f"🔎 Query: {user_prompt}")
+    embedder = SentenceTransformer(EMBEDDING_MODEL)
+    query_vec = embedder.encode([user_prompt])
+
+    # Load sentence chunks and FAISS index
+    sentences, metadata, index = load_data()
+
+    # Retrieve top-K relevant transaction descriptions
+    top_chunks = get_top_k_chunks(sentences, index, query_vec)
+
+    # Save top chunks for inspection
+    with open("pristini_top_chunks.txt", "w", encoding="utf-8") as f:
+        for i, chunk in enumerate(top_chunks):
+            f.write(f"🔹 Chunk {i + 1}:\n{chunk}\n{'-' * 80}\n")
+    print("✅ Top chunks saved to pristini_top_chunks.txt")
+
+    # Generate the answer using Gemma
+    answer = generate_answer(top_chunks, user_prompt)
+    
+    return answer
+
+
+# === Run It ===
+if __name__ == "__main__":
+
+    user_question = input("Ask any Pristini-related question: ")
+    result = query_data(user_question)
+    print("\n💡 LLM Response:\n", result)
+
+    with open("pristini_llm_response.txt", "w", encoding="utf-8") as f:
+        f.write("💡 LLM Response:\n")
+        f.write(result)

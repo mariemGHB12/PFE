@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" />
 
   <style>
+    /* Corps page */
     body {
       margin: 0;
       padding: 0;
@@ -18,7 +19,6 @@
       flex-direction: column;
       align-items: center;
     }
-
     body::before {
       content: "";
       position: fixed;
@@ -28,30 +28,57 @@
       z-index: -1;
     }
 
-    
-    /* Ajustement pour afficher le logo complet */
-    .logo {
-      margin: 20px 0 10px;
-      width: auto;       /* Laisse la largeur s'adapter */
-      max-width: 150px;  /* Limite max largeur pour ne pas être trop grand */
-      height: 60px;      /* Fixe une hauteur fixe pour garder proportions */
-      object-fit: contain; /* Pour éviter déformation */
-}
-
-
-    .chat-container {
-      background: rgba(255,255,255,0.95);
-      width: 95%;
-      max-width: 450px;
-      height: 70vh;
-      border-radius: 20px;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      backdrop-filter: blur(8px);
+    /* Bouton flottant */
+    #chatbot-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+      cursor: pointer;
+      z-index: 10000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease;
+    }
+    #chatbot-btn:hover {
+      background: #0056b3;
     }
 
+    /* Conteneur chat (similaire iframe mais en div) */
+    #chatbot-container {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 100vw;
+      max-width: 400px;
+      height: 80vh;
+      max-height: 600px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+      z-index: 9999;
+    }
+
+    /* Logo */
+    .logo {
+      margin: 20px 0 10px;
+      width: auto;
+      max-width: 150px;
+      height: 60px;
+      object-fit: contain;
+      align-self: center;
+    }
+
+    /* Historique chat */
     .chat-history {
       flex: 1;
       overflow-y: auto;
@@ -61,17 +88,18 @@
       gap: 12px;
     }
 
+    /* Ligne message */
     .message-row {
       display: flex;
       align-items: flex-end;
       gap: 10px;
       animation: fadeIn 0.4s ease;
     }
-
     .user-row {
       flex-direction: row-reverse;
     }
 
+    /* Avatar */
     .avatar {
       width: 35px;
       height: 35px;
@@ -79,6 +107,7 @@
       object-fit: cover;
     }
 
+    /* Bulle message */
     .bubble {
       max-width: 70%;
       padding: 12px 18px;
@@ -88,19 +117,18 @@
       position: relative;
       word-wrap: break-word;
     }
-
     .user-bubble {
       background: #00C19A;
       color: #fff;
       border-bottom-right-radius: 4px;
     }
-
     .bot-bubble {
       background: #f0f0f0;
       color: #333;
       border-bottom-left-radius: 4px;
     }
 
+    /* Bouton suppression message */
     .delete-btn {
       position: absolute;
       top: 4px;
@@ -113,6 +141,7 @@
       font-size: 13px;
     }
 
+    /* Barre saisie */
     .input-bar {
       display: flex;
       align-items: center;
@@ -120,7 +149,6 @@
       border-top: 1px solid #ddd;
       background: #fafafa;
     }
-
     .input-bar textarea {
       flex: 1;
       border: 1px solid #ccc;
@@ -130,7 +158,6 @@
       font-size: 14px;
       height: 40px;
     }
-
     .input-bar button {
       background: #00AEEF;
       color: white;
@@ -144,18 +171,16 @@
       align-items: center;
       transition: 0.3s;
     }
-
     .input-bar button:hover {
       background: #0099c7;
     }
-
     .robot-small {
       width: 28px;
       height: 28px;
       margin-left: 8px;
     }
 
-    /* Footer réduit */
+    /* Footer */
     .footer {
       margin: 8px auto;
       font-size: 10px;
@@ -164,6 +189,7 @@
       max-width: 450px;
       width: 95%;
       box-sizing: border-box;
+      align-self: center;
     }
 
     @keyframes fadeIn {
@@ -175,10 +201,13 @@
 
 <body>
 
-  <!-- Logo agrandi -->
-  <img src="/static/logo.png" alt="Pristini Logo" class="logo" />
+  <!-- Bouton flottant -->
+  <button id="chatbot-btn" aria-label="Toggle chatbot">💬</button>
 
-  <div class="chat-container">
+  <!-- Conteneur chat caché -->
+  <div id="chatbot-container" class="chat-container">
+    <img src="/static/logo.png" alt="Pristini Logo" class="logo" />
+
     <div class="chat-history" id="history"></div>
 
     <div class="input-bar">
@@ -187,87 +216,97 @@
         <img src="https://media.giphy.com/media/TcqEqZZ2KwSSDyy6BI/giphy.gif" alt="robot" class="robot-small" />
       </button>
     </div>
+
+    <div class="footer">© 2025 Pristini AI University</div>
   </div>
 
-  <div class="footer">© 2025 Pristini AI University</div>
+<script>
+  // Toggle affichage chat
+  const btn = document.getElementById('chatbot-btn');
+  const chatbotContainer = document.getElementById('chatbot-container');
 
-  <script>
-    // Envoi du message utilisateur au serveur
-    async function sendPrompt() {
-      const promptInput = document.getElementById("prompt");
-      const prompt = promptInput.value.trim();
-      if (!prompt) return;
+  btn.addEventListener('click', () => {
+    const isVisible = chatbotContainer.style.display === 'flex';
+    chatbotContainer.style.display = isVisible ? 'none' : 'flex';
+    btn.textContent = isVisible ? '💬' : '❌';
+  });
 
-      addMessage("user", prompt);
-      promptInput.value = "";
+  // Envoi du message utilisateur au serveur
+  async function sendPrompt() {
+    const promptInput = document.getElementById("prompt");
+    const prompt = promptInput.value.trim();
+    if (!prompt) return;
 
-      const loadingId = addLoadingMessage();
+    addMessage("user", prompt);
+    promptInput.value = "";
 
-      const response = await fetch("/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ prompt: prompt }),
-      });
+    const loadingId = addLoadingMessage();
 
-      const data = await response.json();
-      removeLoadingMessage(loadingId);
-      addMessage("bot", data.response);
-    }
+    const response = await fetch("/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ prompt: prompt }),
+    });
 
-    // Ajoute un message dans l'historique avec avatar et bouton suppression
-    function addMessage(sender, message) {
-      const historyDiv = document.getElementById("history");
-      const messageRow = document.createElement("div");
-      messageRow.className = "message-row " + (sender === "user" ? "user-row" : "");
+    const data = await response.json();
+    removeLoadingMessage(loadingId);
+    addMessage("bot", data.response);
+  }
 
-      const avatar = document.createElement("img");
-      avatar.className = "avatar";
-      avatar.src = sender === "user" ? "/static/user.png" : "/static/logo.png";
+  // Ajoute un message dans l'historique avec avatar et bouton suppression
+  function addMessage(sender, message) {
+    const historyDiv = document.getElementById("history");
+    const messageRow = document.createElement("div");
+    messageRow.className = "message-row " + (sender === "user" ? "user-row" : "");
 
-      const bubble = document.createElement("div");
-      bubble.className = "bubble " + (sender === "user" ? "user-bubble" : "bot-bubble");
-      bubble.textContent = message;
+    const avatar = document.createElement("img");
+    avatar.className = "avatar";
+    avatar.src = sender === "user" ? "/static/user.jpg" : "/static/logo.png";
 
-      const deleteBtn = document.createElement("button");
-      deleteBtn.className = "delete-btn";
-      deleteBtn.textContent = "×";
-      deleteBtn.onclick = () => messageRow.remove();
+    const bubble = document.createElement("div");
+    bubble.className = "bubble " + (sender === "user" ? "user-bubble" : "bot-bubble");
+    bubble.textContent = message;
 
-      bubble.appendChild(deleteBtn);
-      messageRow.appendChild(avatar);
-      messageRow.appendChild(bubble);
-      historyDiv.appendChild(messageRow);
-      historyDiv.scrollTop = historyDiv.scrollHeight;
-    }
+    const deleteBtn = document.createElement("button");
+    deleteBtn.className = "delete-btn";
+    deleteBtn.textContent = "×";
+    deleteBtn.onclick = () => messageRow.remove();
 
-    // Affiche message de chargement
-    function addLoadingMessage() {
-      const historyDiv = document.getElementById("history");
-      const messageRow = document.createElement("div");
-      messageRow.className = "message-row";
+    bubble.appendChild(deleteBtn);
+    messageRow.appendChild(avatar);
+    messageRow.appendChild(bubble);
+    historyDiv.appendChild(messageRow);
+    historyDiv.scrollTop = historyDiv.scrollHeight;
+  }
 
-      const avatar = document.createElement("img");
-      avatar.className = "avatar";
-      avatar.src = "/static/logo.png";
+  // Affiche message de chargement
+  function addLoadingMessage() {
+    const historyDiv = document.getElementById("history");
+    const messageRow = document.createElement("div");
+    messageRow.className = "message-row";
 
-      const bubble = document.createElement("div");
-      bubble.className = "bubble bot-bubble";
-      bubble.textContent = "⏳...";
+    const avatar = document.createElement("img");
+    avatar.className = "avatar";
+    avatar.src = "/static/logo.png";
 
-      messageRow.appendChild(avatar);
-      messageRow.appendChild(bubble);
-      messageRow.id = "loading-msg";
-      historyDiv.appendChild(messageRow);
-      historyDiv.scrollTop = historyDiv.scrollHeight;
-      return "loading-msg";
-    }
+    const bubble = document.createElement("div");
+    bubble.className = "bubble bot-bubble";
+    bubble.textContent = "⏳...";
 
-    // Supprime le message de chargement
-    function removeLoadingMessage(id) {
-      const loadingMsg = document.getElementById(id);
-      if (loadingMsg) loadingMsg.remove();
-    }
-  </script>
+    messageRow.appendChild(avatar);
+    messageRow.appendChild(bubble);
+    messageRow.id = "loading-msg";
+    historyDiv.appendChild(messageRow);
+    historyDiv.scrollTop = historyDiv.scrollHeight;
+    return "loading-msg";
+  }
+
+  // Supprime le message de chargement
+  function removeLoadingMessage(id) {
+    const loadingMsg = document.getElementById(id);
+    if (loadingMsg) loadingMsg.remove();
+  }
+</script>
 
 </body>
 </html>

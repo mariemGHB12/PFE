@@ -20,7 +20,7 @@ def build_index(json_path, output_dir):
         if isinstance(p, dict) and "title" in p and "description_blocks" in p
     ]
 
-    model = SentenceTransformer("all-MiniLM-L6-v2")
+    
 
     sentences = []
     metadata = []
@@ -57,6 +57,7 @@ def build_index(json_path, output_dir):
         })
 
     print("🔍 Génération des embeddings...")
+    model = SentenceTransformer("all-MiniLM-L6-v2")
     embeddings = model.encode(sentences, show_progress_bar=True)
     embeddings = np.array(embeddings).astype("float32")
 
