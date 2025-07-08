@@ -8,6 +8,7 @@ from typing import List
 from langdetect import detect
 from sentence_transformers import SentenceTransformer
 import google.generativeai as genai
+from pathlib import Path
 from essai import build_index
 
 # === Config API Gemini ===
@@ -18,19 +19,24 @@ genai.configure(api_key=API_KEY)
 # === Paramètres RAG ===
 TOP_K = 5
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
-INDEX_PATH = "C:\\Users\\marie\\OneDrive\\Desktop\\test\\rag_output\\faiss.index"
-SENTENCE_PATH = "C:\\Users\\marie\\OneDrive\\Desktop\\test\\rag_output\\sentences.pkl"
-METADATA_PATH = "C:\\Users\\marie\\OneDrive\\Desktop\\test\\rag_output\\metadata.pkl"
+
+# === Chemins des fichiers ===
+BASE_DIR = Path(__file__).parent  # dossier du script
+INDEX_PATH = BASE_DIR / "rag_output" / "faiss.index"
+SENTENCE_PATH = BASE_DIR / "rag_output" / "sentences.pkl"
+METADATA_PATH = BASE_DIR / "rag_output" / "metadata.pkl"
 
 # === Fonctions Utilitaires ===
 
 def detect_language(text):
+    """Détecte la langue d'un texte"""
     try:
         return detect(text)
     except:
         return 'unknown'
 
 def ask_gemini(prompt):
+    """Interroge l'API Gemini avec un prompt"""
     headers = {"Content-Type": "application/json"}
     payload = {
         "contents": [{"parts": [{"text": prompt}]}]
@@ -43,20 +49,29 @@ def ask_gemini(prompt):
         return f"❌ Error: {response.status_code}, {response.text}"
 
 def load_data():
-    
-    with open(SENTENCE_PATH, "rb") as f:
+    """Charge les données RAG : phrases, metadata et index FAISS"""
+    # Vérifie si les fichiers existent
+    if not INDEX_PATH.exists() or not SENTENCE_PATH.exists() or not METADATA_PATH.exists():
+        raise FileNotFoundError("Un ou plusieurs fichiers RAG sont introuvables.")
+
+    # Chargement des phrases
+    with open(str(SENTENCE_PATH), "rb") as f:
         sentences = pickle.load(f)
-    with open(METADATA_PATH, "rb") as f:
+    # Chargement des métadonnées
+    with open(str(METADATA_PATH), "rb") as f:
         metadata = pickle.load(f)
-    index = faiss.read_index(INDEX_PATH)
+    # Chargement de l'index FAISS
+    index = faiss.read_index(str(INDEX_PATH))
+
     return sentences, metadata, index
 
 def get_top_k_chunks(sentences, index, query_vec, k=TOP_K):
+    """Recherche les k chunks les plus proches"""
     D, I = index.search(np.array(query_vec), k)
     return [sentences[i] for i in I[0]]
 
 def generate_answer(context_chunks: List[str], user_prompt: str):
-    # Détecter la langue sur la question utilisateur uniquement
+    """Construit le prompt final et récupère la réponse Gemini"""
     lang = detect_language(user_prompt)
     if lang == 'en':
         instruction = "Reply in English."
@@ -65,10 +80,8 @@ def generate_answer(context_chunks: List[str], user_prompt: str):
     else:
         instruction = "Réponds en français même si la langue du prompt n'est pas le français."
 
-    # Joindre les contextes récupérés
     context = "\n---\n".join(context_chunks)
 
-    # Construire le prompt complet
     full_prompt = f"""
 {instruction}
 
@@ -92,16 +105,26 @@ Answer:
     return response
 
 def query_data(user_prompt):
+    """Effectue une requête : encode, récupère les chunks et génère la réponse"""
     print(f"🔎 Query: {user_prompt}")
 
     embedder = SentenceTransformer(EMBEDDING_MODEL)
     query_vec = embedder.encode([user_prompt])
+
+    # Chargement des données
     sentences, metadata, index = load_data()
+
+    # Recherche des meilleurs chunks
     top_chunks = get_top_k_chunks(sentences, index, query_vec)
+
+    # Sauvegarde des chunks récupérés pour debug
     with open("pristini_top_chunks.txt", "w", encoding="utf-8") as f:
         for i, chunk in enumerate(top_chunks):
             f.write(f"🔹 Chunk {i+1}:\n{chunk}\n{'-'*80}\n")
+
     print("✅ Top chunks saved to pristini_top_chunks.txt")
+
+    # Génération de la réponse via Gemini
     answer = generate_answer(top_chunks, user_prompt)
     return answer
 
@@ -110,6 +133,7 @@ if __name__ == "__main__":
     user_question = input("Ask any Pristini-related question: ")
     result = query_data(user_question)
     print("\n💡 LLM Response:\n", result)
+
     with open("pristini_llm_response.txt", "w", encoding="utf-8") as f:
         f.write("💡 LLM Response:\n")
         f.write(result)
